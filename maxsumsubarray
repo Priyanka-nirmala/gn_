@@ -1,0 +1,10 @@
+K=int(input())
+Arr=list(map(int,input().split()))
+N=len(Arr)
+winsum=sum(Arr[:K])
+maxsum=winsum
+for i in range(N-K):
+    winsum=winsum-Arr[i]+Arr[i+K]
+    maxsum=max(maxsum,winsum)
+print(maxsum)
+
